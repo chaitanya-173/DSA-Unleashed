@@ -43,7 +43,7 @@ vector<vector<int>> depthFirstSearch(int V, int E, vector<vector<int>> &edges,
 }
 /*
 Why the answer ds is 2d ??
-Ans -> Taaki agar  hamara graph disconnected ho to har ek component ke liye ek ek vector separate ho
+Ans -> Taaki agar  hamara graph disconnected ho toh har ek component ke liye ek ek vector separate ho
 aur un separate vectors ko store karne ke liye ek vector<vector<int>>  liya gya hai
 */
 int main() {

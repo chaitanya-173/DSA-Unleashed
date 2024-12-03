@@ -18,21 +18,22 @@ class Graph {
 
     void bfsTraversal(int vertices, unordered_map<int, list<int> > &adj, vector<int> &bfs) {
         
-        unordered_map<int, bool> visited;         // Visited map to keep track of visited nodes
-        queue<int> q;                             // Queue for BFS
-        q.push(0);                                // Start BFS from node 0 (or any starting node)
-        visited[0] = true;                        // Mark node 0 as visited
+        unordered_map<int, bool> visited;         
+        queue<int> q;                             
+
+        q.push(0);                                
+        visited[0] = true;                        
 
         while(!q.empty()) {
-            int front = q.front();                // Get the front node
-            q.pop();                              // Remove the front node from the queue
-            bfs.push_back(front);                 // Add the front node to the BFS result
+            int front = q.front();                
+            q.pop();                             
+            bfs.push_back(front);                 
 
             // Traverse all neighbors of the front node using unordered_map with list<int>
             for(auto i: adj[front]) {
-                if(!visited[i]) {                 // If neighbor is not visited
-                    visited[i] = true;            // Mark neighbor as visited
-                    q.push(i);                    // Add neighbor to the queue
+                if(!visited[i]) {                           
+                    q.push(i);   
+                    visited[i] = true;                   
                 }
             }
         }
