@@ -6,7 +6,7 @@ bool canPartition(vector<int>& nums) {
     int n = nums.size();
     int sum = 0;
 
-    // check if the total sum is odd -> if yes, return fals
+    // check if the total sum is odd -> if yes, return false
     for(int i=0; i<n; i++) {
         sum += nums[i];
     }
