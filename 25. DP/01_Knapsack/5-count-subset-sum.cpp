@@ -4,8 +4,8 @@ using namespace std;
 // Memoization approach
 int countSubsetSumMemo(vector<int>& arr, int sum, int n, vector<vector<int>>& dp) {
   // baese cases
-  if (n == 0 && sum > 0) return 0; 
   if (sum == 0) return 1;
+  if (n == 0) return 0;
 
   if (dp[n][sum] != -1) return dp[n][sum];
     
